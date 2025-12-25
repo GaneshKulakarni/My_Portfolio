@@ -27,10 +27,10 @@ const Contact = () => {
             };
 
             const response = await emailjs.send(
-                'service_xc2kffo',      // Service ID
-                'template_ubzbkjb',     // Template ID
+                import.meta.env.VITE_EMAILJS_SERVICE_ID,
+                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
                 templateParams,
-                'Ngwi16u41dSZiG9w7'     // Public Key
+                import.meta.env.VITE_EMAILJS_PUBLIC_KEY
             );
 
             console.log('EmailJS Response:', response);
